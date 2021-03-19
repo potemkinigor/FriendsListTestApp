@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mostViewedCellReuseIdentifier" id="KGk-i7-Jjw" customClass="MostViewedTableViewCell" customModule="Friends" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname Name Fathersname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHV-ck-G7A">
+                        <rect key="frame" x="111" y="2" width="203" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhoneNumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-aD-n70">
+                        <rect key="frame" x="111" y="26" width="203" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dQy-Vr-uHP">
+                        <rect key="frame" x="56" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="bKn-2N-24L"/>
+                            <constraint firstAttribute="height" constant="40" id="wUP-Fy-CoK"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75V-8A-uuH" customClass="MostViewedCheckboxView" customModule="Friends" customModuleProvider="target">
+                        <rect key="frame" x="9" y="5" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="wFL-Dn-Dul"/>
+                            <constraint firstAttribute="height" constant="30" id="zpl-IW-Cgc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7y1-aD-n70" secondAttribute="trailing" constant="6" id="4sA-lB-dUB"/>
+                    <constraint firstItem="75V-8A-uuH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="DQ2-4m-9ms"/>
+                    <constraint firstAttribute="bottom" secondItem="7y1-aD-n70" secondAttribute="bottom" constant="2" id="EhW-Oa-YAn"/>
+                    <constraint firstItem="7y1-aD-n70" firstAttribute="leading" secondItem="dQy-Vr-uHP" secondAttribute="trailing" constant="15" id="FYW-qE-Zg9"/>
+                    <constraint firstAttribute="trailing" secondItem="VHV-ck-G7A" secondAttribute="trailing" constant="6" id="Tj7-gw-j86"/>
+                    <constraint firstItem="75V-8A-uuH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="bZq-QM-lsQ"/>
+                    <constraint firstItem="dQy-Vr-uHP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="k9t-ug-Ol1"/>
+                    <constraint firstItem="VHV-ck-G7A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="s1e-LT-ME5"/>
+                    <constraint firstItem="VHV-ck-G7A" firstAttribute="leading" secondItem="dQy-Vr-uHP" secondAttribute="trailing" constant="15" id="vE0-Rq-7sY"/>
+                    <constraint firstItem="dQy-Vr-uHP" firstAttribute="leading" secondItem="75V-8A-uuH" secondAttribute="trailing" constant="17" id="wqa-MA-kwY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favoriteCheckBoxView" destination="75V-8A-uuH" id="HBr-f0-FfV"/>
+                <outlet property="friendAvatarImageView" destination="dQy-Vr-uHP" id="rXa-9b-zFH"/>
+                <outlet property="nameSurnameFathersNameLabel" destination="VHV-ck-G7A" id="O4k-we-Ob8"/>
+                <outlet property="phoneNumberLabel" destination="7y1-aD-n70" id="G6D-lI-33Q"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="96.428571428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
